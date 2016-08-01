@@ -42,7 +42,7 @@ nc -vvzn IP PORT
 
 Ping scan without nmap on class C network
 ```
-for ip in {1..254}; do ping -W 100 -c 1 192.168.1.$ip | grep ttl ; done
+for ip in {1..254}; do ping -c 1 192.168.1.$ip | grep ttl ; done
 ```
 
 
