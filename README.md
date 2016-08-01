@@ -7,12 +7,22 @@ Search for pattern in certain filetypes
 grep --include=\*.{txt,csv,odt,ods} -rnw 'directory' -e "pattern"
 ```
 
-#Text File Processing
+#File things
 Sort:
 -sort passwd file by UID-
 ```
 sort -t":" -k 3 -n /etc/paswd
 ```
+-extract only username from passwd file-
+```
+cut -d":" -f1 /etc/passwd
+```
+
+-Follow a file (handy for logs)
+```
+tail -F /var/log/something
+```
+
 #Permissions
 Change permissions on files to 644 and folders to 744
 ```
@@ -28,4 +38,25 @@ netstat -tnlp
 -netcat to check port-
 ```
 nc -vvzn IP PORT
+```
+#Systemd
+-Reload systemd daemon. After editing service-
+```
+systemctl daemon-reload
+```
+-Show failed services-
+```
+systemctl --failed
+```
+-Show logs for ssh-
+```
+journalctl -u sshd --since today
+```
+-Error logs-
+```
+journalctl -p err
+```
+-follow logs-
+```
+journalctl -f
 ```
