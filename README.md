@@ -67,3 +67,12 @@ journalctl -p err
 ```
 journalctl -f
 ```
+#RPM Packages
+list files in rpm
+```
+rpm -qpl package.rpm
+```
+Show scripts in rpm
+```
+rpm -qp --scripts package.rpm
+```
