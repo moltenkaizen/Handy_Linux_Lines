@@ -8,19 +8,24 @@ grep --include=\*.{txt,csv,odt,ods} -rnw 'directory' -e "pattern"
 ```
 
 #File things
-Sort:
--sort passwd file by UID-
+Sort passwd file by UID
 ```
 sort -t":" -k 3 -n /etc/paswd
 ```
--extract only username from passwd file-
+Extract only username from passwd file
 ```
 cut -d":" -f1 /etc/passwd
 ```
 
--Follow a file (handy for logs)
+Follow a file (handy for logs)
 ```
 tail -F /var/log/something
+```
+
+Shortcut
+```
+mkdir somedir
+cd $_
 ```
 
 #Permissions
