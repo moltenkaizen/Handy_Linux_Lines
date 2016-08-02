@@ -22,11 +22,22 @@ Follow a file (handy for logs)
 tail -F /var/log/something
 ```
 
-Shortcut
+Bash variables
+Final argument of previous command executed
 ```
 mkdir somedir
 cd $_
 ```
+Exit status
+```
+ls afile ; echo $?
+afile
+0
+ls nofile ; echo $?
+ls: cannot access 'nofile': No such file or directory
+2
+```
+
 
 #Permissions
 Change permissions on files to 644 and folders to 744
