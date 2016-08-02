@@ -22,12 +22,19 @@ Follow a file (handy for logs)
 tail -F /var/log/something
 ```
 
-Bash variables
+#Shortcuts
 Final argument of previous command executed
 ```
 mkdir somedir
 cd $_
 ```
+
+Run previous command. Find number using history then !number
+```
+history | grep somethinginteresting
+!243
+```
+
 Exit status
 ```
 ls afile ; echo $?
