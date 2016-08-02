@@ -92,3 +92,15 @@ Show scripts in rpm
 ```
 rpm -qp --scripts package.rpm
 ```
+
+#Download stuff
+```
+curl https://something.com/something.sh -O
+wget --no-check-certificate https://something.com/something.sh
+```
+
+#SSH
+Connect to bigserver on ssh port 1234 then forward port 80 on wildcat to my local port 9999. Point local brower to locahost:9999
+```
+sudo ssh -L9999:wildcat:80 alarm@bigserver.org -p 1234
+```
