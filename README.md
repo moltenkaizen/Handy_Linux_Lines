@@ -111,3 +111,8 @@ Connect to bigserver on ssh port 1234 then forward port 80 on wildcat to my loca
 ```
 sudo ssh -L9999:wildcat:80 alarm@bigserver.org -p 1234
 ```
+
+#DD with pv and pigz
+```
+dd if=/dev/mmcblk0 | pv | pigz --fast > raspbian_pi.img
+```
