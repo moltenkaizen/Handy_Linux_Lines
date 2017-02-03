@@ -54,9 +54,9 @@ find . -type d | xargs chmod -v 744
 ```
 
 #Networking
-What is listening
+What is listening. n = numeric, l = listening, p = programs, t = tcp, u = udp
 ```
-netstat -tnlp
+netstat -nlp
 ```
 Netcat to check port
 ```
